@@ -1,0 +1,13 @@
+							TENSOR 
+
+Komputer hanya bisa memproses data kalau data tersebut diubah jadi angka. Tensor bertugas membungkus data rumit tersebut.
+
+1. Komputer Itu "Buta" Selain Sama AngkaKomputer, sekeren apapun AI-nya, gak tahu apa itu warna merah, suara kucing, atau muka orang. Di mata prosesor, semuanya adalah aliran angka 0 dan 1. Jadi, tugas pertama kita sebelum melatih AI adalah mengubah gambar kucing atau video kosan lu menjadi kotak angka raksasa. Wadah kotak angka inilah yang dinamakan Tensor.2. Kenapa Butuh Dimensi Banyak (Lebih dari 3D)?Karena data di dunia nyata itu punya banyak properti/karakteristik yang harus dicatat komputer sekaligus. Contohnya:
+
+- Gambar Berwarna (3D Tensor): Butuh 3 dimensi karena komputer harus mencatat [Tinggi gambar, Lebar gambar, dan 3 Sisi Warna: Red, Green, Blue].
+
+- Kumpulan Gambar / Batch (4D Tensor): Pas lu mau ngelatih AI pakai 100 gambar sekaligus, dimensinya nambah satu lagi di depan buat nomor antrean gambarnya: [Gambar ke-berapa, Tinggi, Lebar, Warna].
+
+- Video (4D/5D Tensor): Video itu kan kumpulan gambar (frames) yang bergerak tiap detik. Berarti komputer butuh dimensi tambahan untuk mencatat faktor Waktu/Durasi.
+
+Kesimpulan untuk Catatan Akhir di Word Lu:Inti Definitif Tensor: Tensor merupakan suprastruktur wadah data multidimensi ($\mathbb{R}^n$) yang bertindak sebagai penerjemah universal objek dunia nyata ke dalam format numerik yang dapat dieksekusi oleh komputer. Peningkatan dimensi tensor (dari 3D, 4D, hingga $n$-D) berkorelasi langsung dengan kompleksitas fitur data yang ditampung, seperti penambahan variabel waktu pada video (frames) atau volume kuantitas data pada pemrosesan batch di algoritma Deep Learning.

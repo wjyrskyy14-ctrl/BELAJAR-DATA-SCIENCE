@@ -1,0 +1,51 @@
+/* Gaya dasar untuk seluruh halaman (Body) */
+body {
+    /* Milih jenis tulisan 'Raleway'. Kalau internet mati, otomatis ganti ke tulisan standar 'sans-serif' */
+    font-family: 'Raleway', sans-serif;
+    /* Ngilangin jarak bawaan browser biar web kita nempel pas ke pinggir layar */
+    margin: 0;
+    padding: 0;
+    /* Kasih warna abu-abu sangat muda biar mata nggak sakit liat warna putih terus */
+    background-color: #f8f9fa;
+}
+
+/* Navigasi / Header (Bagian atas yang warna gelap) */
+.menu-container {
+    /* Kasih warna biru tua (keren kayak tema coding) */
+    background-color: #2c3e50;
+    /* Kasih jarak di dalam menu biar tulisan nggak sesak */
+    padding: 1rem;
+    /* Pake sistem 'Flex' biar menu-menu di dalamnya berjejer rapi ke samping */
+    display: flex;
+    /* Kasih jarak antar menu sejauh 20 pixel */
+    gap: 20px;
+}
+
+/* Gaya buat tulisan link menu */
+.nav-link {
+    color: white; /* Warna tulisan putih biar kontras sama background biru tua */
+    text-decoration: none; /* Ngilangin garis bawah bawaan link biar lebih modern */
+    font-weight: 500; /* Bikin tulisan agak sedikit tebal */
+}
+
+/* Efek pas kursor mouse nempel di menu (Hover) */
+.nav-link:hover {
+    text-decoration: underline; /* Pas ditempel kursor, muncul garis bawah (biar user tau itu bisa diklik) */
+}
+
+/* Kotak utama konten (Container) */
+.container {
+    max-width: 800px; /* Lebar maksimal kotak cuma 800px biar enak dibaca, nggak meluber */
+    margin: 50px auto; /* Atas-bawah jaraknya 50px, kiri-kanan 'auto' biar kotaknya otomatis ke TENGAH */
+    padding: 30px; /* Kasih jarak di dalam kotak biar tulisan nggak nempel ke tembok kotak */
+    background: white; /* Kotak isinya warna putih bersih */
+    /* Kasih efek bayangan tipis biar kotaknya kelihatan 'melayang' dan mewah */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px; /* Bikin pojok-pojok kotaknya jadi tumpul/bulat, nggak tajam */
+}
+
+/* Gaya buat daftar teknologi (List) */
+.tech-lists {
+    list-style-type: square; /* Titik-titik listnya berubah jadi bentuk kotak kecil */
+    color: #34495e; /* Warna tulisan biru keabu-abuan biar lebih elegan */
+}

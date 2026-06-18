@@ -1,0 +1,18 @@
+{% extends 'layout.html' %} 
+<!-- Baris di atas artinya: Ambil kerangka utama dari file 'layout.html'. Jadi kita tidak perlu tulis <html> atau <head> lagi di sini. -->
+{% block content %} 
+<!-- Baris di atas adalah pembuka "kotak". Apa pun yang kita tulis di dalam sini akan dimasukkan ke bagian 'content' yang ada di layout.html. -->
+
+<div class="container">
+<!-- sebuah Label. Label ini memberitahu CSS (yang ada di file main.css kamu) untuk memberikan aturan pada kotak tersebut. -->
+  <h1>About {{name}}</h1> 
+  <!-- {{name}} adalah variabel kiriman dari Python (app.py). Flask akan otomatis mengganti tulisan ini dengan isi dari variabel tersebut. -->
+
+  <p>
+    This is a 30 days of python programming challenge. If you have been coding
+    this far, you are awesome. Congratulations for the job well done!
+  </p>
+</div>
+
+{% endblock %} 
+<!-- Baris di atas adalah penutup "kotak". Menandakan konten khusus untuk halaman About sudah selesai di sini. -->

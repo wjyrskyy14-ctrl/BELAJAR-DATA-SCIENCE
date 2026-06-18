@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Pengaturan dasar agar browser mengerti cara menampilkan teks dan simbol -->
+    <meta charset="UTF-8" />
+    <!-- Agar tampilan web otomatis rapi saat dibuka di HP maupun Laptop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Link di bawah ini seperti memilih model tulisan (font) agar web tidak membosankan -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Nunito:300,400|Raleway:300,400,500&display=swap" rel="stylesheet" />
+    
+    <!-- Ini cara memanggil file CSS (baju web). Flask akan otomatis mencari ke folder static/css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    
+    <!-- Judul di tab browser. Judulnya bisa berubah sesuai halaman yang kamu buka -->
+    <title>30 Days of Python - {{ title if title else '' }}</title>
+  </head>
+
+  <body>
+    <!-- Bagian Kepala (Header): Tempat menu navigasi berada -->
+    <header>
+      <div class="menu-container">
+        <div>
+          <!-- Logo atau Nama Web di pojok kiri -->
+          <a class="brand-name nav-link" href="/">30DaysOfPython</a>
+        </div>
+        
+        <!-- Daftar menu navigasi (Link untuk pindah-pindah halaman) -->
+        <ul style="display: flex; list-style: none; margin: 0; gap: 15px;">
+          <!-- url_for itu cara Flask "bisikin" alamat halaman ke browser -->
+          <li><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+          <li><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+          <li><a class="nav-link" href="{{ url_for('post') }}">Text Analyzer</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Bagian Isi Utama (Main) -->
+    <main>
+      <!--INI BAGIAN PALING PENTING-->
+      <!--Anggap ini sebagai 'Lubang Kosong'. Isinya akan berubah-ubah tergantung halaman mana yang kamu klik-->
+      <!--Kalau klik Home, lubang ini diisi konten Home. Kalau klik About, lubang ini diisi konten About Kalau klik Home, lubang ini diisi konten Home. Kalau klik About, lubang ini diisi konten About -->
+      {% block content %} {% endblock %}
+    </main>
+  </body>
+</html>

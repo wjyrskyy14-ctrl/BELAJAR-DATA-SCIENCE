@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} 
+<!--Artinya: Kita tetap memakai "bingkai" yang sama (menu navigasi tetap ada).-->
+
+{% block content %}
+<!--Artinya: Mulai mengisi isi foto di dalam bingkai khusus untuk halaman hasil.-->
+
+<div class="container">
+    <!--Artinya: Kotak rapi agar tulisan hasil tidak berantakan ke pinggir.-->
+    <h1>Hasil Analisis</h1>
+    
+    <!--Artinya: Tulisan hijau tebal untuk memberi tahu user bahwa datanya sudah aman sampai di Python.-->
+    <p style="color: green; font-weight: bold;">Teks berhasil diterima dan dicetak di terminal VS Code kamu!</p>
+    
+    <hr> {# Artinya: Garis pembatas horizontal agar tampilan lebih rapi. #}
+    
+    <!---Artinya: Tombol atau link untuk balik lagi ke halaman input teks kalau mau coba teks lain.-->
+    <!--url_for('post') akan secara otomatis mencarikan alamat halaman input kamu.-->
+    <a href="{{ url_for('post') }}" class="nav-link" style="color: blue;">← Kembali input teks</a>
+</div>
+
+{% endblock %}

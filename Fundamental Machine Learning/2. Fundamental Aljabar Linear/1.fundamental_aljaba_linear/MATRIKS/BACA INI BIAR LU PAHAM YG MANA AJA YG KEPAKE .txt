@@ -1,0 +1,34 @@
+					YG SERING KEPAKE YAITU YG DI "TOPIK LANJUTAN"
+
+1. Moore–Penrose Pseudoinverse ($A^+$)
+
+Kapan kepakenya? Pas lu bikin model Regresi Linear (rumus LinearRegression() di Scikit-Learn).
+
+Fungsi Aslinya: Di dunia nyata, data mentah yang lu dapet itu hampir gak pernah rapi atau berbentuk persegi pas (pasti jumlah baris/sampel jauh lebih banyak daripada kolom fitur). Karena matriksnya non-persegi, komputer gak bisa pakai invers biasa (A pangkat min 1).
+
+Peran Sehari-hari: Biar komputer bisa nemuin garis tren paling pas (best-fit line) dari jutaan data lu secara instan tanpa eror, algoritma di balik layar langsung maksa pakai rumus Pseudoinverse ini.
+
+2. Bentuk Kuadrat & Matriks Pasti Positif
+
+Kapan kepakenya? Pas proses Training / Optimasi (saat model AI lu lagi belajar dari kesalahan pakai Gradient Descent atau pengoptimal seperti Adam/SGD).
+
+Fungsi Aslinya: Bentuk kuadrat (X transpose AX) itu dipakai untuk menghitung grafik fungsi kerugian (Loss Function). Nah, algoritma optimasi itu paling benci kalau grafiknya acak-acakan kayak bukit yang banyak lembah palsunya (bikin AI tersesat).
+
+Peran Sehari-hari: Komputer bakal selalu ngecek apakah matriks turunan keduanya (Hessian) bersifat Pasti Positif atau enggak. Kalau pasti positif, grafik erornya dijamin berbentuk mangkok mulus sempurna. Alhasil, model AI lu bisa nyari jalan turun ke titik paling dasar (eror terkecil) dengan sangat cepat tanpa muter-muter gak jelas.
+
+3. Produk Hadamard (AOB)
+
+Kapan kepakenya? Pas lu mainan Neural Networks tingkat lanjut, seperti arsitektur LSTM (buat teks/NLP) atau model Transformer (otaknya ChatGPT).
+
+Fungsi Aslinya: Perkalian baris-kali-kolom biasa itu gunanya untuk mengubah dimensi ruang data. Tapi, kadang AI butuh operasi yang cuma berfungsi sebagai "sakelar filter" (mengalikan fitur yang bersesuaian secara langsung).
+
+Peran Sehari-hari: Di dalam sistem Gating Mechanism (fitur penyaring informasi), produk Hadamard dipakai buat ngebatesin informasi mana yang boleh lewat dan mana yang harus dilupakan oleh AI. Misal: elemen data dikalikan 1 artinya diingat, dikalikan 0 artinya dihapus.
+
+						
+						Kesimpulan Gampangnya:
+
+Materi Awal (Vektor, Matriks, Tensor): Itu adalah cara bungkus datanya. Gambar jadi Tensor 3D, tabel jadi Matriks 2D, angka tunggal jadi skalar.
+
+Materi Tengah (Faktorisasi, Eigen): Itu adalah cara bersihin datanya. Buat kompres gambar, buang fitur gak penting (PCA), atau nyari komponen utama.
+
+Materi Topik Lanjutan: Itu adalah cara otak AI-nya berpikir dan belajar. Buat nyari solusi regresi, nentuin arah optimasi yang bener, dan nyaring informasi di dalam jaringan saraf tiruan.

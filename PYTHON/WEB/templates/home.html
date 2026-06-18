@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} 
+<!-- Mengambil kerangka dasar dari layout.html supaya menu navigasi dan footer otomatis muncul. -->
+
+{% block content %} 
+<!-- Mulai mengisi bagian konten utama untuk halaman Home. -->
+
+<div class="container">
+  <!-- Membungkus konten agar rapi di tengah dan tidak mentok ke pinggir layar. -->
+
+  <h1>Welcome to {{name}}</h1> 
+  <!-- Mengambil variabel 'name' dari app.py (isinya: '30 Days Of Python Programming'). -->
+
+  <p>
+    This application clean texts and analyse the number of word, characters and
+    most frequent words in the text. Check it out by click text analyzer at the
+    menu. You need the following technologies to build this web application:
+  </p>
+
+  <ul class="tech-lists">
+    <!-- Membuat daftar (list) tidak berurutan untuk menampilkan teknologi yang dipakai. -->
+
+    {% for tech in techs %} 
+    <!-- LOGIKA LOOPING: Flask akan melihat list 'techs' dari Python ['HTML', 'CSS', 'Flask', 'Python']. -->
+    <!-- Dia akan "berputar" sebanyak isi list tersebut. -->
+
+    <li class="tech">{{tech}}</li>
+    <!-- Di setiap putaran, variabel 'tech' akan berisi satu nama teknologi dan mencetaknya jadi <li>. -->
+
+    {% endfor %} 
+    <!-- Wajib ditutup: Memberitahu Flask bahwa perintah perulangan sudah selesai di sini. -->
+  </ul>
+</div>
+
+{% endblock %} 
+<!-- Selesai mengisi bagian konten utama. -->

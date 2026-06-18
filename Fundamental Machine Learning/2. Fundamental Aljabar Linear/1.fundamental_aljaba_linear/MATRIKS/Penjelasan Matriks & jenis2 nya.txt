@@ -1,0 +1,33 @@
+						MATERI MATRIKS 
+
+ADA 7 JENIS - JENIS MATRIKS  :
+
+- Matriks persegi:  n×n  (baris dan kolom yang sama).
+contoh Angka (2x2)= np.array([[3,8],
+				   			  [4,6]])
+
+- Matriks baris:  1×n  (hanya satu baris).
+contoh matriks 1xn = np.array([1,2,3])
+
+- Matriks kolom:  m×1  (hanya satu kolom).
+contoh matriks kolom mx1 = np.array([[1],
+									 [2],
+								     [3]])
+
+
+- Matriks nol (null): semua entri  =0 .
+
+
+- Matriks diagonal: hanya entri diagonal yang boleh bukan nol.
+contoh matriks diagonal = np.array([[1,0,0],
+								    [0,2,0],
+								    [0,0,3]])
+
+- Matriks identitas  In : entri diagonal\miring  =1 , lainnya  =0 .
+contoh matriks identitas = np.array([[1,0],
+									 [0,2],
+									 [0,0]])
+
+- Segitiga Atas/Bawah: semua entri di bawah/di atas diagonal utama adalah nol.
+
+

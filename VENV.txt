@@ -1,0 +1,31 @@
+                                            VIRTUAL ENVIRONTMENT 
+
+ruang kerja Python yang terpisah untuk setiap project atau lingkungan Python khusus untuk satu project
+
+kenapa wajib pakai venv? 
+= Karena setiap project bisa butuh versi package yang berbeda.
+
+📘 Contoh Virtual Environment untuk Data Science
+
+Misalnya kamu mau bikin project: Analisis Data Mahasiswa
+
+dan butuh package seperti:
+pandas → olah data
+numpy → perhitungan
+matplotlib → grafik
+seaborn → visualisasi
+scikit-learn → machine learning
+
+Kalau langsung install semua ke komputer:bisa bentrok dan berantakan
+
+					*Cara Membuat venv (Windows)*
+
+1. Mmebuat folder project = misal : *data_science_project*
+2. Masuk ke folder = *cd data_science_project*
+3. Buat venv nya = *python -m venv venv*
+4. Aktifkan venv nya = *venv\Scripts\activate*
+5. Instal Package Data Science nya = *Pandas, Numpy, matplotlib dll*
+	(atau install semua nya dengan cepat = *pip install pandas numpy matplotlib seaborn scikit-learn*)
+6. Cek package = *pip freeze*
+
+

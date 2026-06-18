@@ -1,0 +1,31 @@
+{% extends 'layout.html' %} 
+<!--Artinya: Kita meminjam "bingkai" atau tampilan dasar dari file layout.html.-->
+
+{% block content %}
+<!--Artinya: Mulai mengisi "lubang kosong" yang ada di tengah-tengah bingkai tadi.-->
+
+<div class="container">
+<!--Artinya: Sebuah kotak pelindung agar tulisan "Text Analyzer" dan formulir tidak berantakan.-->
+  <h1>Text Analyzer</h1>
+
+  <!-- FORMULIR: Bayangkan ini sebagai Kotak Surat -->
+  <!-- action="{{ url_for('post') }}" : Alamat tujuan. Surat ini akan dikirim ke fungsi 'post' di Python kamu. -->
+  <!-- method="POST" : Cara pengiriman. 'POST' artinya kita mengirimkan data rahasia/isi surat di dalam amplop tertutup. -->
+  <form action="{{ url_for('post') }}" method="POST">
+    
+    <div>
+      <!-- TEXTAREA: Ini adalah kertas suratnya -->
+      <!-- name="content" : Nama label di kertasnya. Supaya nanti di Python kita bisa panggil datanya dengan nama 'content'. -->
+      <!-- autofocus : Begitu web dibuka, kursor langsung kedap-kedip di sini, siap buat ngetik. -->
+      <textarea rows="10" name="content" autofocus placeholder="Ketik teks di sini..."></textarea>
+    </div>
+
+    <div>
+      <!-- Tombol 'Kirim': Saat diklik, semua yang diketik di kertas surat akan dikirim ke Python. -->
+      <input type="submit" class="btn" value="Process Text" />
+    </div>
+
+  </form>
+</div>
+{% endblock %}
+<!--Artinya: Selesai mengisi kotak konten.-->

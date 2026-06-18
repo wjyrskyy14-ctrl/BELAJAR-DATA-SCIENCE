@@ -1,0 +1,10 @@
+PACKAGE MANAGER (PIP) = sama seperti play store nya python
+
+pip install → install package
+pip list → lihat package
+pip show → detail package
+pip uninstall → hapus package
+pip freeze → semua package + versi
+requests → ambil data dari internet
+numpy → perhitungan cepat
+pandas → olah data
