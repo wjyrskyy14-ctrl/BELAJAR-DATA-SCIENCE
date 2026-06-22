@@ -67,13 +67,15 @@ INSERT INTO orders (order_id, customer_id, amount) VALUES
 -- Langkah C: Tampilkan Hasil Full Outer Join (Menggunakan Trik UNION)
 SELECT k.name, m.amount
 FROM customers k
-LEFT JOIN orders m ON k.customer_id = m.customer_id
+LEFT JOIN orders m 
+	ON k.customer_id = m.customer_id
 
 UNION 
 
 SELECT k.name, m.amount
 FROM customers k
-RIGHT JOIN orders m ON k.customer_id = m.customer_id;  
+RIGHT JOIN orders m 
+	ON k.customer_id = m.customer_id;  
 
 -- --------------------------------------------------------------------
 -- [CONTOH 3] MATERIAL: CROSS JOIN (Gabung Silang)
