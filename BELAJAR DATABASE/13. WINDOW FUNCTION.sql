@@ -86,7 +86,7 @@ SELECT
     employee_id, department_id, salary,
     FIRST_VALUE(salary) OVER (PARTITION BY department_id ORDER BY salary) AS gaji_terkecil,
     SUM(salary)         OVER (PARTITION BY department_id ORDER BY salary) AS gaji_kumulatif
-FROM employees;    
+FROM employees;
 
 /* VISUALISASI OUTPUT CONTOH 5 & 6:
 +-------------+---------------+--------+---------------+----------------+
